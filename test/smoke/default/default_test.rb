@@ -5,6 +5,6 @@
 # The Inspec reference, with examples and extensive documentation, can be
 # found at http://inspec.io/docs/reference/resources/
 
-describe command('wget -o - http://localhost:8080') do
-  its(:stdout) { should match /jenkins/ }
+describe command('curl http://localhost:8080') do
+  its(:stdout) { should match /Authentication required/ }
 end
