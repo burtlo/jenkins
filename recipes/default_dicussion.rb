@@ -38,7 +38,7 @@ package 'jenkins'
 package 'software-properties-common'
 
 execute 'add-apt-repository ppa:openjdk-r/ppa' do
-  not_if { File.exist?('/etc/apt/openjdk-r-ppa-trusty.list') }
+  not_if { File.exist?('/etc/apt/sources.list.d/openjdk-r-ppa-trusty.list') }
   notifies :run, 'execute[apt-get update]', :immediately
 end
 

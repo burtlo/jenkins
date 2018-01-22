@@ -22,7 +22,7 @@ platforms:
 suites:
   - name: default
     run_list:
-      - recipe[jenkins::default]
+      - recipe[jenkins::sixth_step]
     verifier:
       inspec_tests:
         - test/smoke/default
